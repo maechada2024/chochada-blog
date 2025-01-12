@@ -1,0 +1,33 @@
+{% include "chada_blog_app/base.html" %}
+
+<header id="header">
+  {% include "chada_blog_app/header.html" %}
+</header>
+
+<!-- Body -->
+<div class="container-fluid overflow-hidden">
+  <!-- Left sidebar -->
+  <div id="asideMainTocBlog" class="col-sm-2 sidenav">
+    <!-- append data here -->
+  </div>
+  <!-- Main content -->
+  <div id="blogArticles" class="container-fluid col-sm-8 
+          text-left shadow">
+  </div>
+  <!-- Right sidebar -->
+  <div id="asideRightBlog" class="col-sm-2 sidenav">
+
+  </div>
+</div>
+
+<footer id="footer" class="mt-auto">
+  {% include "chada_blog_app/footer.html" %}
+</footer>
+
+{% load static %}
+<script src={% static "chada_blog_app/jquery/blog-control.js" %} type="application/javascript"></script>
+<!-- CSS -->
+<link href={% static "chada_blog_app/css/blog.css" %} rel="stylesheet">
+
+{% block javascript %}{% endblock javascript %}
+<!-- <script src="../../jquery/member-profile-control.js" type="application/javascript"></script> -->

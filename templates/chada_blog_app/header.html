@@ -1,0 +1,73 @@
+
+{% load static %}
+{% comment %} <script src={% static "chada_blog_app/jquery/header-control.js" %}></script> {% endcomment %}
+
+<nav id="navMenu" class="navbar navbar-expand-lg fixed-top myNavColor">
+    <!--  -->
+    <div class="container-fluid shadow myNavFont"
+        style="background-color: #f3e7f7;">
+        <a class="navbar-brand order-1" href="">
+            <img src={% static "images_apps/logo/chada-logo-v2-violet.svg" %} width="50" height="50">
+        </a>
+        <button class="border-0 navbar-toggler order-2" 
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-text"></span>
+        </button>
+        <div class="collapse navbar-collapse align-items-center order-3" id="navbarSupportedContent">
+            <ul class="nav nav-underline p-2">
+                <li class="nav-item">
+                    <a href="" class="nav-link" aria-current="page">Home</a>
+                </li>
+                <li id="my-blog" class="nav-item">
+                    <a id="my-blog-link" href={% url "blog:article" %} class="nav-link">Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button"
+                        data-bs-toggle="dropdown" area-expanded="false">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Business Intelligence</a></li>
+                        <li><a href="#" class="dropdown-item">Data Analytics</a></li>
+                        <li><a href="#" class="dropdown-item">Data Visulaization</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item">SQL: DML</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled" aria-disabled="true">Services</a>
+                </li>
+                <li id="about-me" class="nav-item">
+                    <a id="about-me-link" href={% url "blog:aboutme" %} class="nav-link">About Me</a>
+                </li>
+            </ul>
+            <form role="search" class="d-flex ms-auto p-2">
+                <input type="search" class="form-control me-2" placeholder="search..."
+                    aria-label="Search">
+                <button class="btn myBtn" type="submit">Search</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a href="#" class="nav-link myBtn2"><i class="fa-solid fa-right-to-bracket"></i> Admin</a>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex vr my-purple" style="width: 3px; height: 40px;"></div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link myBtn2"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <div class="d-flex vr my-purple" style="width: 3px; height: 40px;"></div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link myBtn2">
+                        <i class="bi bi-person-plus-fill"></i>&nbsp;Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <div class="hl" style="width: 80px"></div>
+                </li>
+            </ul>            
+        </div>
+    </div>           
+</nav>
